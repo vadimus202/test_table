@@ -1,0 +1,21 @@
+---
+title: "table_test"
+author: "vb"
+date: "Saturday, March 21, 2015"
+output: slidy_presentation
+---
+
+
+
+## Plain table
+
+```{r echo=F, results='asis'}
+knitr::kable(mtcars) #test
+```
+
+
+## Interactive table
+
+```{r echo=F, results='asis'}
+print(googleVis::gvisTable(cbind(rownames(mtcars),mtcars)), 'chart')
+```
